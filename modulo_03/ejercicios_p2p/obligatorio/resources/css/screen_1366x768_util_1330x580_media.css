@@ -1,0 +1,626 @@
+/****************************  FUENTES ****************************/
+
+@font-face {
+    font-family: FiraMono-Bold;
+    src: url('../fonts/Fira-master/woff/FiraMono-Bold.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Bold.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraMono-Medium;
+    src: url('../fonts/Fira-master/woff/FiraMono-Medium.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Medium.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraMono-Regular;
+    src: url('../fonts/Fira-master/woff/FiraMono-Regular.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Regular.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Bold;
+    src: url('../fonts/Fira-master/woff/FiraSans-Bold.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Bold.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-BoldItalic;
+    src: url('../fonts/Fira-master/woff/FiraSans-BoldItalic.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-BoldItalic.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Book;
+    src: url('../fonts/Fira-master/woff/FiraSans-Book.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Book.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-BookItalic;
+    src: url('../fonts/Fira-master/woff/FiraSans-BookItalic.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-BookItalic.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Medium;
+    src: url('../fonts/Fira-master/woff/FiraSans-Medium.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Medium.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Regular;
+    src: url('../fonts/Fira-master/woff/FiraSans-Regular.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Regular.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Light;
+    src: url('../fonts/Fira-master/woff/FiraSans-Light.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Light.eot') format("embedded-opentype");
+}
+/****************************  VALORES POR DEFECTO ****************************/
+
+body.default {
+    background: #FFF url() repeat left top;
+    color: #000;
+    font-family: Times New Roman;
+    font-size: 16px;
+    margin: 8px;
+    display: block;
+}
+p.default {
+    display: block;
+    margin-before: 1em;
+    margin-after: 1em;
+    margin-start: 0;
+    margin-end: 0;
+}
+h1.default {
+    display: block;
+    font-size: 2em;
+    margin-before: 0.67em;
+    margin-after: 0.67em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+h2.default {
+    display: block;
+    font-size: 1.5em;
+    margin-before: 0.83em;
+    margin-after: 0.83em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+h3.default {
+    display: block;
+    font-size: 1.17em;
+    margin-before: 1em;
+    margin-after: 1em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+h4.default {
+    display: block;
+    margin-before: 1.33em;
+    margin-after: 1.33em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+h5.default {
+    display: block;
+    font-size: .83em;
+    margin-before: 1.67em;
+    margin-after: 1.67em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+h6.default {
+    display: block;
+    font-size: .67em;
+    margin-before: 2.33em;
+    margin-after: 2.33em;
+    margin-start: 0;
+    margin-end: 0;
+    font-weight: bold;
+}
+blockquote.default {
+    display: block;
+    margin-before: 1em;
+    margin-after: 1em;
+    margin-start: 40px;
+    margin-end: 40px;
+}
+pre.default {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
+ol.default {
+    display: block;
+    list-style-type: decimal;
+    margin-before: 1em;
+    margin-after: 1em;
+    margin-start: 0;
+    margin-end: 0;
+    padding-start: 40px;
+}
+ul.default {
+    display: block;
+    list-style-type: disc;
+    margin-before: 1em;
+    margin-after: 1em;
+    margin-start: 0;
+    margin-end: 0;
+    padding-start: 40px;
+}
+li.default {
+    display: list-item;
+}
+/****************************  CUERPO ****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    /Reseteo de los valores por defecto /
+}
+html {
+    /*width: 100%;
+    height: 100%;*/
+
+/* NOTA: Si no se pone la propiedad height de la etiqueta html a 100%, entonces no se aprovecha todo la altura del navegador. 
+    Sin embargo esto no pasa con la propiedada width, al menos en firefox. */
+}
+body {
+    background: #FFFFFF url() repeat left top;
+    font: 16px'FiraSans-Regular', georgia, Serif;
+    /*width: 100%;
+    height: 100%;*/
+
+/* NOTA: Si no se pone la propiedad height de la etiqueta body a 100%, entonces no se aprovecha todo la altura del navegador.
+    Sin embargo esto no pasa con la propiedada width, al menos en firefox. */
+}
+.clear {
+    clear: both;
+}
+/****************************  PÁGINA ****************************/
+
+.basic_branding * {
+    /* */
+}
+.basic_branding header {
+    display: block;
+    min-height: 7.5%;
+    text-align: center;
+    background-color: #fcf;
+}
+.basic_branding footer {
+    display: block;
+    min-height: 7.5%;
+    text-align: center;
+    background-color: #fcf;
+}
+.basic_branding footer.large {
+    font-family: 'FiraSans-BoldItalic', georgia, Serif;
+    font-size: 2.5em;
+}
+/****************************  CONTENIDO PÁGINA ****************************/
+
+.basic_branding div.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    min-height: 85%;
+}
+/****************************  MENÚ ****************************/
+
+/* Vértial ****************************/
+
+.basic_branding div.content > nav.menu {
+    flex: 1 10 10%;
+    order: 1;
+    background-color: #ffc;
+}
+.basic_branding .menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.basic_branding .menu li {
+    display: inline;
+}
+.basic_branding .menu a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    margin: 0px 100px 0px 0px;
+    float: left;
+}
+.basic_branding .menu a: hover {
+    color: #FF0;
+    background-color: #666;
+}
+/****************************  ASIDE ****************************/
+
+.basic_branding div.content > aside {
+    flex: 1 6 20%;
+    order: 3;
+    background-color: #ffc;
+}
+/****************************  CONTENIDO SECCIÓN ****************************/
+
+/*.basic_branding div.content_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+        flex: 3 1 60%;
+    order: 2;
+}*/
+
+/****************************  SECCIÓN ****************************/
+
+.basic_branding div.content > section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    flex: 3 1 60%;
+    order: 2;
+    /*min-height: 50%;*/
+}
+.basic_branding section > header {
+    flex: 1 20 5%;
+    order: 1;
+    background-color: #cff;
+}
+.basic_branding section > article {
+    flex: 10 1 90%;
+    order: 2;
+    background-color: #bff;
+}
+.basic_branding section > footer {
+    flex: 1 20 5%;
+    text-align: center;
+    order: 3;
+    background-color: #cff;
+}
+/****************************  GALERÍA ****************************/
+
+#marco {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+}
+#contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.vertical {
+    padding: 3px;
+    border: 1px solid black;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+}
+.horizontal {
+    border: 1px solid white;
+    background-color: white;
+    width: 300px;
+    height: 196px;
+}
+/****************************  TÍTULOS ****************************/
+
+.basic_branding h1, .basic_branding h2, .basic_branding h3 {
+    font-family: 'FiraSans-Regular', verdana, sans-Serif;
+}
+.basic_branding h1 {
+    font-size: 2em;
+    /* FireFox OS recomendation for smartphone apps: Description: Heading; Use cases: Headers. font-family: 'FiraSans-Regular' font-size: 2.5em */
+}
+.basic_branding h2 {
+    font-size: 1.5em;
+    /* FireFox OS recomendation for smartphone apps: Description: Subheading Use cases: Subheaders, Dialog titles. font-family: 'FiraSans-Regular' font-size: 1.6em */
+}
+.basic_branding h3 {
+    font-size: 1.33em;
+}
+.basic_branding h4 {
+    font-size: 1em;
+}
+/****************************  PÁRRAFOS ****************************/
+
+.basic_branding p {
+    font-family: 'FiraSans-Regular', georgia, Serif;
+    font-size: 1em;
+    color: black;
+    /* FireFox OS recomendation for smartphone apps: Description: Body; Use cases: Body text, lists, default size.  font-family: 'FiraSans-Regular' font-size: 1.9em */
+}
+.basic_branding p.small {
+    font-size: 0.83em;
+    /* FireFox OS recomendation for smartphone apps: Description: Body Small; Use cases: Status bar.  font-family: 'FiraSans-Regular' font-size: 1.5em */
+}
+.basic_branding p.small.em {
+    font-size: 0.83em;
+    color: olive;
+}
+.basic_branding p.mini {
+    font-size: 0.67em;
+    /* FireFox OS recomendation for smartphone apps: Description: Body Mini; Use cases: Fine print and status bar.  font-family: 'FiraSans-Regular' font-size: 1.4em */
+}
+.basic_branding p.micro {
+    font-size: 0.5em;
+    /* FireFox OS recomendation for smartphone apps: Description: Body Micro; Use cases: Application icon label.  font-family: 'FiraSans-Regular' font-size: 1.3em */
+}
+.basic_branding p.alt {
+    font-family: 'FiraSans-Medium', verdana, sans-Serif;
+    font-size: 0.9em;
+    color: black;
+    /* FireFox OS recomendation for smartphone apps: Description: Body Medium; Use cases: Med. body text and btn label. font-family: 'FiraSans-Medium' font-size: 1.7em */
+}
+.basic_branding p#fecha {
+    color: red;
+}
+/****************************  RESALTADOS ****************************/
+
+.basic_branding strong {
+    font-family: 'FiraSans-Bold', verdana, sans-Serif;
+    font-size: 1em;
+}
+.basic_branding pre {
+    font-family: 'Inconsolata', courier, monospace;
+    font-size: 1em;
+    border-style: solid;
+    border-color: blue;
+    max-width: 60%;
+    min-width: 40%
+}
+/****************************  LISTAS ****************************/
+
+.basic_branding li {
+    list-style-type: circle;
+}
+.basic_branding ol {
+    list-style-type: decimal;
+}
+/****************************  ENLACES ****************************/
+
+.basic_branding a {
+    font-family: 'FiraSans-Regular', georgia, Serif;
+    font-size: 1.3em;
+    color: blue;
+}
+.basic_branding a: hover {
+    font-size: 1.4em;
+    background-color: orange;
+    color: orange;
+}
+.basic_branding a: hover.forAside {
+    font-size: 1.4em;
+    background-color: rgba(100, 100, 100, 0.2);
+    color: green;
+}
+/****************************  MENÚS ****************************/
+
+/**************************** INICIO MENÚ VERTICAL MINIMALISTA */
+
+.basic_branding nav.menu_vertical_minimalista {
+    width: 15%;
+    max-width: 130px;
+    min-width: 100px;
+}
+.basic_branding .menu_vertical_minimalista ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.basic_branding .menu_vertical_minimalista a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+}
+.basic_branding .menu_vertical_minimalista a: hover {
+    color: #FF0;
+}
+/**************************** FIN MENÚ VERTICAL MINIMALISTA */
+
+/**************************** INICIO MENÚ HORIZONTAL MINIMALISTA */
+
+.basic_branding .menu_horizontal_minimalista ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.basic_branding .menu_horizontal_minimalista li {
+    display: inline;
+}
+.basic_branding .menu_horizontal_minimalista a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    float: left;
+}
+.basic_branding .menu_horizontal_minimalista a: hover {
+    color: #FF0;
+    background-color: #666;
+}
+/**************************** FIN MENÚ HORIZONTAL MINIMALISTA */
+
+/**************************** INICIO MENÚ VERTICAL ESTANDAR */
+
+/* Propuesto en el curso */
+
+.basic_branding nav.menu_vertical_estandar {
+    width: 130px;
+}
+.basic_branding .menu_vertical_estandar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #CCC;
+    border-right-color: #CCC;
+    border-left-color: #CCC;
+}
+.basic_branding .menu_vertical_estandar a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+}
+.basic_branding .menu_vertical_estandar a: hover {
+    color: #FFF;
+    background-color: #666;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: #36F;
+}
+/**************************** FIN MENÚ VERTICAL ESTANDAR */
+
+/**************************** INICIO MENÚ HORIZONTAL ESTANDAR */
+
+/* Propuesto en el curso */
+
+.basic_branding .menu_horizontal_estandar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #CCC;
+}
+.basic_branding .menu_horizontal_estandar li {
+    display: inline;
+}
+.basic_branding .menu_horizontal_estandar a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    float: left;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCC;
+}
+.basic_branding .menu_horizontal_estandar a: hover {
+    color: #FFF;
+    background-color: #666;
+}
+/**************************** FIN MENÚ HORIZONTAL ESTANDAR */
+
+/**************************** INICIO MENÚ VERTICAL FANTASIA */
+
+.basic_branding .menu_vertical_fantasia nav {
+    width: 10%;
+    min-width: 130px;
+}
+.basic_branding .menu_vertical_fantasia ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #CCC;
+    border-right-color: #CCC;
+    border-left-color: #CCC;
+}
+.basic_branding .menu_vertical_fantasia a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+}
+.basic_branding .menu_vertical_fantasia a: hover {
+    color: #00f;
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding: 25px;
+    background-color: #f00;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: #36F;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #36F;
+}
+/**************************** FIN MENÚ VERTICAL FANTASIA */
+
+/**************************** INICIO MENÚ HORIZONTAL FANTASIA */
+
+.basic_branding .menu_horizontal_fantasia ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #CCC;
+}
+.basic_branding .menu_horizontal_fantasia ul: hover {
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: #f0f;
+}
+.basic_branding .menu_horizontal_fantasia li {
+    display: inline;
+}
+.basic_branding .menu_horizontal_fantasia a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    float: left;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCC;
+}
+.basic_branding .menu_horizontal_fantasia a: hover {
+    color: #F00;
+    background-color: #0f0;
+    text-decoration: overline;
+    font-size: 1.2em;
+    padding: 25px;
+}
+/**************************** FIN MENÚ HORIZONTAL FANTASIA */
