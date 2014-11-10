@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Módulo 4, ejercicio P2P Obligatorio</title>
+        <meta name="description" content="Módulo 4, ejercicio P2P Obligatorio">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="A. L. R.">
+        <style>
+        body {background-color:lightgray}
+        h2, h3  {color:blue}
+        h3.error {color:red}
+        p {color:green}
+        </style>
+    </head>
+    <body>
+        <h2>Claculadora del área de una pared en m<sup>2</sup></h2>
+        <script type="text/javascript">
+        var ancho = prompt("Calculadora del área de una pared en m2.\n\nIntroduce el ancho de la pared en m2");
+        var alto = prompt("Calculadora del área de una pared en m2.\n\nIntroduce el alto de la pared en m2");
+        var pattern=/\d/;
+        var anchoIsNaumber = pattern.test(ancho);
+        var altoIsNaumber = pattern.test(alto);
+        if (typeof (ancho) == undefined || typeof (alto) == undefined || ancho == "" || alto == "" || ! anchoIsNaumber || ! altoIsNaumber) {
+        	document.write("<h3 class=error>Debe indicar un valor válido para el ancho y alto.</h3>.");
+        } else {
+        var area = ancho * alto;
+        	document.write("<h3>La pared de ancho = " + ancho + " y alto = " + alto + " tiene un área de "+ area + "  m<sup>2</sup></h3>.");
+        }
+        </script>
+    </body>
+</html>
