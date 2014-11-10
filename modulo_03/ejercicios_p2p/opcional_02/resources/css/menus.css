@@ -1,0 +1,174 @@
+/* INICIO MENÚ VERTICAL ESTANDAR */
+
+nav.menu_vertical_estandar {
+    width: 130px;
+}
+.menu_vertical_estandar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #CCC;
+    border-right-color: #CCC;
+    border-left-color: #CCC;
+}
+.menu_vertical_estandar a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+}
+.menu_vertical_estandar a:hover{
+    color: #FFF;
+    background-color: #666;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: #36F;
+}
+/* FIN MENÚ VERTICAL ESTANDAR */
+
+/* INICIO MENÚ HORIZONTAL ESTANDAR */
+
+.menu_horizontal_estandar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #CCC;
+}
+.menu_horizontal_estandar li {
+    display: inline;
+}
+.menu_horizontal_estandar a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    float: left;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCC;
+}
+.menu_horizontal_estandar a:hover{
+    color: #FFF;
+    background-color: #666;
+}
+.clear {
+    clear: both;
+}
+/* FIN MENÚ HORIZONTAL ESTANDAR */
+
+/* INICIO MENÚ VERTICAL FANTASIA */
+
+.menu_vertical_fantasia nav {
+    width: 10%;
+    min-width: 130px;
+}
+.menu_vertical_fantasia ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: #CCC;
+    border-right-color: #CCC;
+    border-left-color: #CCC;
+}
+.menu_vertical_fantasia a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+}
+.menu_vertical_fantasia a:hover {
+    color: #00f;
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding: 25px;
+    background-color: #f00;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: #36F;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #36F;
+}
+/* FIN MENÚ VERTICAL FANTASIA */
+
+/* INICIO MENÚ HORIZONTAL FANTASIA */
+
+.menu_horizontal_fantasia ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #CCC;
+}
+.menu_horizontal_fantasia ul:hover {
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: #f0f;
+}
+.menu_horizontal_fantasia li{
+    display: inline;
+}
+.menu_horizontal_fantasia a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding: 6px;
+    float: left;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCC;
+    background-color: #EAEAEA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCC;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #CCC;
+}
+.menu_horizontal_fantasia a:hover{
+    color: #F00;
+    background-color: #0f0;
+    text-decoration: overline;
+    font-size: 1.2em;
+    padding: 25px;
+}
+
+/* FIN MENÚ HORIZONTAL FANTASIA */

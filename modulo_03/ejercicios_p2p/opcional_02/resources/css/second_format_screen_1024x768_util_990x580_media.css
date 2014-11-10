@@ -1,0 +1,220 @@
+/* FUENTES *********************************************************/
+
+@font-face {
+    font-family: FiraMono-Bold;
+    src: url('../fonts/Fira-master/woff/FiraMono-Bold.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Bold.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraMono-Medium;
+    src: url('../fonts/Fira-master/woff/FiraMono-Medium.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Medium.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraMono-Regular;
+    src: url('../fonts/Fira-master/woff/FiraMono-Regular.woff') format("woff"), url('../fonts/Fira-master/eot/FiraMono-Regular.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Bold;
+    src: url('../fonts/Fira-master/woff/FiraSans-Bold.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Bold.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-BoldItalic;
+    src: url('../fonts/Fira-master/woff/FiraSans-BoldItalic.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-BoldItalic.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Book;
+    src: url('../fonts/Fira-master/woff/FiraSans-Book.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Book.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-BookItalic;
+    src: url('../fonts/Fira-master/woff/FiraSans-BookItalic.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-BookItalic.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Medium;
+    src: url('../fonts/Fira-master/woff/FiraSans-Medium.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Medium.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Regular;
+    src: url('../fonts/Fira-master/woff/FiraSans-Regular.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Regular.eot') format("embedded-opentype");
+}
+@font-face {
+    font-family: FiraSans-Light;
+    src: url('../fonts/Fira-master/woff/FiraSans-Light.woff') format("woff"), url('../fonts/Fira-master/eot/FiraSans-Light.eot') format("embedded-opentype");
+}
+/* CUERPO *********************************************************/
+
+* {
+    /*Reseteo de los valores por defecto */
+
+margin: 0;
+    padding: 0
+}
+body {
+    font: 16px'FiraSans-Regular', georgia, Serif;
+    border: 10px solid red;
+    padding: 4% 2% 3% 2%;
+    margin: 2% 4% 1% 4%;
+}
+body .basic_branding {
+    background: #FFFFFF url() repeat left top;
+    color: gray;
+    padding: 5px,
+}
+.clear {
+    clear: both;
+}
+/* PÁGINA *********************************************************/
+
+.basic_branding header {
+    background-color: #FFFF99;
+    text-align: center;
+}
+.basic_branding aside {
+    background-color: rgba(100, 100, 100, 0.2);
+}
+.basic_branding aside: hover {
+    background-color: orange;
+}
+.basic_branding footer {
+    margin-top: 2%;
+    border-style: double;
+    border-color: red;
+    height: 80%;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    text-align: center;
+}
+.basic_branding footer.large {
+    font-family: 'FiraSans-BoldItalic', georgia, Serif;
+    font-size: 2.5em;
+    color: red;
+}
+/* SECCIÓN *********************************************************/
+
+.basic_branding section {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+.basic_branding section > article {
+    background-color: #FFFFEE;
+}
+.basic_branding section > header {
+    background-color: #FFFF99;
+    text-align: center;
+}
+.basic_branding section > footer {
+    margin-top: 2%;
+    border-style: double;
+    border-color: red;
+    height: 80%;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    text-align: center;
+}
+/* TÍTULOS *********************************************************/
+
+.basic_branding h1, .basic_branding h2, .basic_branding h3 {
+    font-family: 'FiraSans-Regular', verdana, sans-Serif;
+    color: navy;
+}
+.basic_branding h1 {
+    /*Description: Heading; Use cases: Headers*/
+
+font-size: 2.5em;
+}
+.basic_branding h2 {
+    /*Description: Subheading Use cases: Subheaders, Dialog titles*/
+
+font-size: 1.6em;
+}
+.basic_branding h3 {
+    font-size: 1.6em;
+    color: gray;
+    text-decoration: underline;
+    text-align: center;
+}
+.basic_branding h4 {
+    font-size: 1.6em;
+    color: gray;
+}
+/* PÁRRAFOS ********************************************************/
+
+.basic_branding p {
+    /*Description: Body; Use cases: Body text, lists, default size*/
+
+font-family: 'FiraSans-Regular', georgia, Serif;
+    font-size: 1.9em;
+    color: black;
+}
+.basic_branding p.small {
+    /*Description: Body Small; Use cases: Status bar*/
+
+font-size: 1.5em;
+}
+.basic_branding p.small.em {
+    font-size: 1.5em;
+    color: olive;
+}
+.basic_branding p.mini {
+    /*Description: Body Mini; Use cases: Fine print and status bar*/
+
+font-size: 1.4em;
+}
+.basic_branding p.micro {
+    /*Description: Body Micro; Use cases: Application icon label*/
+
+font-size: 1.3em;
+}
+.basic_branding p.alt {
+    /*Description: Body Medium; Use cases: Med. body text and btn label*/
+
+font-family: 'FiraSans-Medium', verdana, sans-Serif;
+    font-size: 1.7em;
+    color: black;
+}
+.basic_branding p#fecha {
+    color: red;
+}
+/* RESALTADOS ********************************************************/
+
+.basic_branding strong {
+    font-family: 'FiraSans-Bold', verdana, sans-Serif;
+    font-size: 1em;
+}
+.basic_branding pre {
+    font-family: 'Inconsolata', courier, monospace;
+    font-size: 1em;
+    border-style: solid;
+    border-color: blue;
+    max-width: 60%;
+    min-width: 40%
+}
+/* LISTAS ********************************************************/
+
+.basic_branding li {
+    list-style-type: circle;
+}
+.basic_branding ol {
+    list-style-type: decimal;
+}
+/* ENLACES ********************************************************/
+
+.basic_branding a {
+    font-family: 'FiraSans-Regular', georgia, Serif;
+    font-size: 1.3em;
+    color: orange;
+}
+.basic_branding a: hover {
+    font-size: 1.4em;
+    background-color: orange;
+    color: green;
+}
+.basic_branding a: hover.forAside {
+    font-size: 1.4em;
+    background-color: rgba(100, 100, 100, 0.2);
+    color: green;
+}
