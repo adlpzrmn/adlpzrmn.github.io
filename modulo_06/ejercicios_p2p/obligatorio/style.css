@@ -1,0 +1,43 @@
+body {
+    background-color: lightgray
+}
+h2, h3 {
+    color: blue
+}
+h3.error {
+    color: red
+}
+p {
+    color: green
+}
+table {
+    padding: 0px;
+    margin: 0px;
+    border-spacing: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #333;
+}
+th, td {
+    padding: 0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #333;
+}
+th {
+    background-color: #E2E2E2;
+}
+td {
+    background-color: #F0F0F0;
+}
+div#propertiesList {
+	display: none;
+}
+div#userMessage {
+	display: none;
+}
+div#userMessageInLine {
+	color: red;
+}
