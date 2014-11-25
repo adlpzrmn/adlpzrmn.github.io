@@ -3,17 +3,17 @@
     <head>
         <link rel='stylesheet' type='text/css' href='style.css'/>
         <meta charset = "utf-8">
-        <title>Módulo 5, ejercicio P2P Obligatorio</title>
-        <meta name="description" content="Módulo 5, ejercicio P2P Obligatorio">
+        <title>Módulo 6, ejercicio P2P Obligatorio</title>
+        <meta name="description" content="Módulo 5, ejercicio P2P Obligatorio" >
         <meta name="keywords" content="HTML,CSS,XML,JavaScript">
         <meta name="author" content="A. L. R.">
-        <script type="text/javascript" src="ojectProperties.js"></script>
+<script type="text/javascript" src="objectProperties.js"></script>
     </head>
-    <body onload="ojectProperties.js">
+    <body >
         <h2>Listado de las propiedades de un objeto del entorno de ejecución de JS en este navegador</h2>
-        <h4>Introduce un objeto a listar:</h4>
-        <input type="text" size="100" id="objectName" value="Introduce el nombre de un objeto del DOM, como por ejemplo 'window', 'document', 'screen', etc.">
-        <button type="button" onclick="javascript:propertiesPrint(this.document.getElementById('objectName'));">Listar</button>
+        <h4>Introduce el nombre de un objeto del DOM, como por ejemplo 'window', 'document', 'screen', etc.</h4>
+        <input type="text" size="100" id="objectName" onchange="onchangeObjectName()">
+        <button  onclick="propertiesPrint(document.getElementById('objectName').value)">Listar</button>
         <br>
         <div id="userMessage">
             <h3><span id="userMessageInline"></span></h3>

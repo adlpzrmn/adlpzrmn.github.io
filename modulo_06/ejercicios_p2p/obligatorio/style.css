@@ -38,6 +38,6 @@ div#propertiesList {
 div#userMessage {
 	display: none;
 }
-div#userMessageInLine {
+span#userMessageInline {
 	color: red;
 }
