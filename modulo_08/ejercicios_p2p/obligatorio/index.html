@@ -75,8 +75,8 @@
             }
         });
 
-        $("#cambiar").on('tap', cambiar);
-        $("#inicializar").on('swipe', function() {
+        $("#clock").on('tap', cambiar);
+        $("#clock").on('swipe', function() {
             if (t === undefined) {
                 localStorage.c = "0.0";
                 localStorage.paradas = "";
