@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cronómetro</title>
+    <meta charset="UTF-8">
+
+    <style type="text/css" media="screen">
+    /*
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    */
+    
+    #clock {
+        border: 5px solid orange;
+        width: 495px;
+        height: 228px;
+        background: #00ff00 url("clok.png") no-repeat center;
+    }
+    #cronoContainer {
+        width: 40px;
+        height: 26px;
+        position: relative;
+        top: 40%;
+        left: 45%;
+        z-index: 2;
+    }
+    </style>
+    <script type="text/javascript" src="zepto.min.js">
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        localStorage.c = (localStorage.c || "0.0");
+        localStorage.paradas = (localStorage.paradas || "");
+
+        var t, cl = $("#crono");
+        var paradas = $("#paradas");
+
+        function incr() {
+            localStorage.c = +localStorage.c + 0.1;
+        }
+
+        function mostrar() {
+            cl.html((+localStorage.c).toFixed(1));
+            paradas.html(localStorage.paradas);
+        };
+
+        function arrancar() {
+            t = setInterval(function() {
+                incr();
+                mostrar()
+            }, 100);
+        };
+
+        function parar() {
+            paradas.html(paradas.html() + "<li>" + (+localStorage.c).toFixed(1) + "</li>")
+            localStorage.paradas = paradas.html();
+            clearInterval(t);
+            t = undefined;
+        };
+
+        function cambiar() {
+            if (!t) arrancar();
+            else parar();
+        };
+
+        $("#cambiar").on('click', cambiar);
+        $("#inicializar").on('click', function() {
+            if (t === undefined) {
+                localStorage.c = "0.0";
+                localStorage.paradas = "";
+                mostrar();
+            }
+        });
+
+        $("#cambiar").on('tap', cambiar);
+        $("#inicializar").on('swipe', function() {
+            if (t === undefined) {
+                localStorage.c = "0.0";
+                localStorage.paradas = "";
+                mostrar();
+            }
+        });
+        mostrar();
+    });
+    </script>
+</head>
+
+<body>
+    <h2>Cronómetro</h2>
+    <div id="clock">
+        <div id="cronoContainer">
+            <h2><span id="crono"> 0.00</span></h2>
+        </div>
+    </div>
+
+
+    <button type="button" id="cambiar"> arrancar/parar </button>
+    <button type="button" id="inicializar"> inicializar </button>
+    <div>
+        <h2>Paradas realizadas:</h2>
+        <ul id="paradas">
+        </ul>
+
+    </div>
+</body>
+
+</html>

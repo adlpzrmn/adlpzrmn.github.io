@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+    #iframeUrl {
+        padding: 10px;
+        border: 5px solid pink;
+    }
+    #form {
+        width: 300px;
+        height: 100px;
+    }
+    iframe {
+        padding: 10px;
+        border: 5px solid pink;
+        background-color: white;
+        width: 300px;
+        height: 350px;
+    }
+    #iframes {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    #marco {
+        background-color: pink;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid black;
+    }
+    .iframeContent {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /* PROBLEMA: Al establecer la dirección en columna para el div interior, se pierde la posibilidad
+        de que eeste div sea responsive por si mismo.
+        Parece que solo es responsive a lo ancho si se mantiene la dirección row por fila, que es la por defecto*/
+        
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    </style>
+    <script type="text/javascript" src="zepto.min.js">
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        var urls = ["http://getbootstrap.com", "http://vishub.org"];
+
+        function mostrar(urls) {
+            var i, iframes = "";
+            for (i = 0; i < urls.length; ++i) {
+                iframes += "<div id='iframesContent_" + i + "' class='iframeContent'>";
+                iframes += "<h4 id='iframeUrl'>URL " + i + ": " + urls[i] + "</h4>";
+                iframes += "<iframe src='" + urls[i] + "'></iframe></div>";
+                iframes += "</div>";
+            }
+            $('#iframes').html(iframes);
+
+            $('#indiceUrlParaEliminar').val("Índice de una URL existente.");
+        };
+
+        $("#boton").on('click', function() {
+            urls.push($('#nuevo').val());
+            mostrar(urls);
+        });
+
+        $("#botonEliminarUrl").on('click', function() {
+            var urlInidice = $('#indiceUrlParaEliminar').val();
+            if (isNaN(urlInidice) || urlInidice.trim() == "") {
+                alert("Debe introducir un índice numérico de una URL.");
+                $('#indiceUrlParaEliminar').val("Índice de una URL existente.");
+                return;
+            } else if (urlInidice < 0 || urls.length - 1 < urlInidice) {
+                alert("Debe introducir el índice de una de las URL's existentes.");
+                $('#indiceUrlParaEliminar').val("Índice de una URL existente.");
+                return;
+            } else {
+                urls.splice(urlInidice, 1);
+            }
+
+            mostrar(urls);
+        });
+
+        mostrar(urls);
+
+    });
+    </script>
+</head>
+
+<body>
+    <h3>Ejemplos de diseño responsivo</h3>
+    <div id="form">
+        <input type="text" id="nuevo" value="Nuevo URL" />
+        <button type="button" id="boton"> Añadir </button>&nbsp;&nbsp;
+        <br><br>
+        <input type="text" id="indiceUrlParaEliminar" value="Índice de una URL existente." size="25" />
+        <button type="button" id="botonEliminarUrl"> Eliminar </button>
+    </div>
+    <div id='marco'>
+        <div id="iframes">
+        </div>
+    </div>
+</body>
+
+</html>
