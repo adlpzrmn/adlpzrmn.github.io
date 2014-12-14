@@ -1,0 +1,9 @@
+{
+  "version": "5.0",
+  "name": "Cronómetro FFOS",
+  "package_path": "https://adlpzrmn.github.io/modulo_09/ejercicios_p2p/obligatorio/packed/cronometroffos.zip",
+  "developer": {
+    "name": "ALR",
+    "url": "http://adlpzrmn.github.io"
+  }
+}
