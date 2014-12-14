@@ -1,0 +1,15 @@
+{
+  "version": "5.0",
+  "name": "Reloj",
+  "description": "Reloj Analogico y Digital",
+  "launch_path": "/clock.htm",
+  "icons": {
+    "16":  "/ico_16.png",
+    "48":  "/ico_48.png",
+    "128": "/ico_128.png"
+  },
+  "developer": {
+    "name": "InternetNG Team",
+    "url": "http://internetng.dit.upm.es"
+  }
+}
