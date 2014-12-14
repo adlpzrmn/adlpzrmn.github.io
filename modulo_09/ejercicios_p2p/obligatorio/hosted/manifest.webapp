@@ -1,0 +1,16 @@
+{
+  "version": "5.0",
+  "name": "Cronometro_FFOS",
+  "description": "Cronometro digital como web app",
+  "launch_path": "/modulo_09/ejercicios_p2p/obligatorio/hosted/index.html",
+
+  "icons": {
+    "16":  "/modulo_09/ejercicios_p2p/obligatorio/hosted/ico_16.png",
+    "48":  "/modulo_09/ejercicios_p2p/obligatorio/hosted/ico_48.png",
+    "128": "/modulo_09/ejercicios_p2p/obligatorio/hosted/ico_128.png"
+  },
+  "developer": {
+    "name": "ALR",
+    "url": "http://adlpzrmn.github.io"
+  }
+}
