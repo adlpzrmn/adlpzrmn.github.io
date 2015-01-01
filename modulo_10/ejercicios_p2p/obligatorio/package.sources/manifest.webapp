@@ -1,0 +1,16 @@
+{
+  "version": "5.0",
+  "name": "Simple_Geolocalizacion",
+  "description": "App de Simple Geolocalizacion",
+  "launch_path": "/simpleGeolocalizacion.html",
+
+  "icons": {
+    "16":  "/ico_16.png",
+    "48":  "/ico_48.png",
+    "128": "/ico_128.png"
+  },
+  "developer": {
+    "name": "ALR",
+    "url": "http://adlpzrmn.github.io"
+  }
+}

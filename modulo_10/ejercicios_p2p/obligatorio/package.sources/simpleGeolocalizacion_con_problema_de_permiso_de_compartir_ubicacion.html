@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GMaps.js &mdash; Geolocation</title>
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="gmaps.js"></script>
+    <link rel="stylesheet" type="text/css" href="mypath.css" />
+    <script type="text/javascript">
+    var map, lat, lng;
+    var latitudFinal;
+    var longitudFinal;
+
+    function compactar() {
+        //NOTA: Problema, el navegador vuelve a preguntar si permito compartir la ubicación.
+        // Esperando por la respuesta se deja de ejecutar la función.
+        // Solo cuando volvemos a dar a compactar, entonces se dibuja ruta compactad e inmediatamente
+        // vuelve a redibujar el mapa por lo que de nuevo se borra la ruta
+        // la solución elegante es no redibujar el mapa, y se puede hacer con las funciones de la librería.
+        // Se borran todas las rutas y los marcadores y se pinta la nueva.
+        // Pero quiero hacerlo una vez redibujando el mapa.
+        geolocalizar();
+
+        // muestra ruta entre marcas anteriores y actuales
+        map.drawRoute({
+            origin: [lat, lng], // origen en coordenadas anteriores
+            // destino en coordenadas del click o toque actual
+            destination: [latitudFinal, longitudFinal],
+            travelMode: 'driving',
+            strokeColor: '#000000',
+            strokeOpacity: 0.6,
+            strokeWeight: 5
+        });
+
+        lat = latitudFinal; // guarda coords para marca siguiente
+        lng = longitudFinal;
+
+        map.addMarker({
+            lat: lat,
+            lng: lng
+        }); // pone marcador en mapa
+    };
+
+    function enlazarMarcador(e) {
+
+        // muestra ruta entre marcas anteriores y actuales
+        map.drawRoute({
+            origin: [lat, lng], // origen en coordenadas anteriores
+            // destino en coordenadas del click o toque actual
+            destination: [e.latLng.lat(), e.latLng.lng()],
+            travelMode: 'driving',
+            strokeColor: '#000000',
+            strokeOpacity: 0.6,
+            strokeWeight: 5
+        });
+
+        lat = e.latLng.lat(); // guarda coords para marca siguiente
+        lng = e.latLng.lng();
+        latitudFinal = lat;
+        longitudFinal = lng;
+
+        map.addMarker({
+            lat: lat,
+            lng: lng
+        }); // pone marcador en mapa
+    };
+
+    function geolocalizar() {
+        GMaps.geolocate({
+            success: function(position) {
+                lat = position.coords.latitude; // guarda coords en lat y lng
+                lng = position.coords.longitude;
+
+                map = new GMaps({ // muestra mapa centrado en coords [lat, lng]
+                    el: '#map',
+                    lat: lat,
+                    lng: lng,
+                    click: enlazarMarcador,
+                    tap: enlazarMarcador
+                });
+                map.addMarker({
+                    lat: lat,
+                    lng: lng
+                }); // marcador en [lat, lng]
+            },
+            error: function(error) {
+                alert('Geolocalización falla: ' + error.message);
+            },
+            not_supported: function() {
+                alert("Su navegador no soporta geolocalización");
+            },
+        });
+    };
+
+    $(function() {
+        geolocalizar();
+    });
+    </script>
+</head>
+
+<body>
+    <div style="float: left">
+        <h1>Geolocalización</h1>
+    </div>
+    <div style="float: rigth">
+        <input type="button" name="compactar" value="Compactar" onclick="javascript:compactar();">
+    </div>
+    <br>
+    <div id="map"></div>
+</body>
+
+</html>
