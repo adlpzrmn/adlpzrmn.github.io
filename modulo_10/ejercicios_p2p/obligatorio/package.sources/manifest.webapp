@@ -1,25 +1,23 @@
 {
-  "version": "5.0",
-  "name": "Simple_Geolocalizacion",
+  "version": "0.01",
+  "name": "Simple Geolocalizacion",
   "description": "App de Simple Geolocalizacion",
   "launch_path": "/simpleGeolocalizacion.html",
-
+  
   "icons": {
     "16":  "/icon_16.png",
     "48":  "/icon_48.png",
     "128": "/icon_128.png"
   },
-
+  
   "developer": {
     "name": "ALR",
     "url": "http://adlpzrmn.github.io"
   },
-
-  "permissions":
-2  {
-3    "geolocation":
-4    {
-5      "description": "Permiso necesario para geolocalizar"
-6    }
-7  }
+  
+  "permissions": {
+    "geolocation": {
+      "description": "Permiso requerido para geolocalizar"
+    }
+  }
 }
