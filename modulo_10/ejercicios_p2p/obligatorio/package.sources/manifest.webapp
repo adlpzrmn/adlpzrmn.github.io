@@ -1,5 +1,5 @@
 {
-  "version": "5.0",
+  "version": "1.00",
   "name": "Simple_Geolocalizacion",
   "description": "App de Simple Geolocalizacion",
   "launch_path": "/simpleGeolocalizacion.html",
@@ -14,7 +14,7 @@
     "name": "ALR",
     "url": "http://adlpzrmn.github.io"
   },
-  
+
   "permissions":
 2  {
 3    "geolocation":
